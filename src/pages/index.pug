@@ -1,6 +1,25 @@
-doctype html
-html(lang="ru")
-    head
-        title Главная страница сайта
-    body
-        h1 Привет!
+extends ../layouts/default.pug
+block variables 
+  - var title = 'Главная страница'
+
+block content 
+  include ../components/cards-list/card-list
+    block cards
+      article.card 
+        .card-image
+          img(src="./images/card.svg", alt="")
+        .card__content 
+          .card__title Заголовок карты 1
+          .card__text Текст карты 1
+      article.card 
+        .card-image
+          img(src="./images/card.svg", alt="")
+        .card__content 
+          .card__title Заголовок карты 2
+          .card__text Текст карты 2
+      article.card 
+        .card-image
+          img(src="./images/card.svg", alt="")
+        .card__content 
+          .card__title Заголовок карты 3
+          .card__text Текст карты 3
