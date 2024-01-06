@@ -5,21 +5,8 @@ block variables
 block content 
   include ../components/cards-list/card-list
     block cards
-      article.card 
-        .card-image
-          img(src="./images/card.svg", alt="")
-        .card__content 
-          .card__title Заголовок карты 1
-          .card__text Текст карты 1
-      article.card 
-        .card-image
-          img(src="./images/card.svg", alt="")
-        .card__content 
-          .card__title Заголовок карты 2
-          .card__text Текст карты 2
-      article.card 
-        .card-image
-          img(src="./images/card.svg", alt="")
-        .card__content 
-          .card__title Заголовок карты 3
-          .card__text Текст карты 3
+      include ../components/card/card
+      +card('/images/card.svg', 'Карточка 1', 'Текст карточки 1')
+      +card('/images/card.svg', 'Карточка 2', 'Текст карточки 2')
+      +card('/images/card.svg', 'Карточка 3', 'Текст карточки 3')
+
